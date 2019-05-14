@@ -10,6 +10,12 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO Holberton project
  */
+
+/*
+* Prototypes
+*/
+int read_file(void);
+
 typedef struct stack_s
 {
 	int n;

@@ -12,9 +12,20 @@ Si coincide, retornar 0.
 Si no coincide, retornar 1.
 Argumento dos [1]: Si existe, crear un nodo en la lista de la estructura (completar)
 */
-	if (argc != 2)
-	{
+	int sec;
+	int oper;
+	int exe;
 
+	if (reception[0])
+	{
+		oper = get_verifier(reception[0]);
+
+		if (reception[1])
+		{
+			sec = atoi(reception[1]);
+			   /*addnode with sec*/
+		}
+		exe = (*f)(
 	}
 
 }

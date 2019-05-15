@@ -4,18 +4,33 @@
  *
  *Return: 0
  */
-int read_file(void)
+int read_file(int argc, char *argv[])
+/* int main(int argc, char **argv) */
 {
-	char filename;
-	FILE *fp;
+        int fd = open(argv[1], O_RDONLY);
+        int size= 1024, count = 0;
+        FILE *file = fopen ( argv[1], "r" );
 
-	gets(filename);
-	fp = fopen(filename, "r");
+        (void)argc;
+        (void)argv;
+        (void)fd;
+        (void)size;
 
-	if (fp == NULL)
+        if ( file != NULL )
+        {
+                char line [ 128 ]; /* or other suitable maximum line size */
+                while ( fgets ( line, sizeof line, file ) != NULL )
+                {
+                        count++;
+                       printf("%s count: ", line);
+                }
+                fclose ( file );
+        }
+	else
 	{
-	perror("Error while opening the file.\n");
-	exit(EXIT_FAILURE);
+		perror("Open file failed");
 	}
-	return (0);
+
+        printf("File: %s fd: %d count: %d\n", argv[1], fd, count);
+        return (0);
 }

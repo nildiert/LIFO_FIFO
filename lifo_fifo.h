@@ -11,7 +11,6 @@
 #include <unistd.h>
 #include <string.h>
 
-
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -29,6 +28,8 @@ int read_file(int argc, char *argv[]);
 /* void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _free(stack_t **stack);
+char **_strtok(char *line);
+char *strcp(char *str);
 */
 
 typedef struct stack_s

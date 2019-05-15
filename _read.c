@@ -11,16 +11,17 @@ int read_file(int argc, char *argv[])
         int size= 1024, count = 0;
         FILE *file = fopen ( argv[1], "r" );
 
-        (void)argc;
         (void)argv;
         (void)fd;
         (void)size;
 
-        if ( file != NULL )
+        if ( argc != 2 )
         {
                 char line [ 128 ]; /* or other suitable maximum line size */
                 while ( fgets ( line, sizeof line, file ) != NULL )
                 {
+			while((fgetc(fd)) != "\n")
+			printf("%c", ch);
                         count++;
                        printf("%s count: ", line);
                 }

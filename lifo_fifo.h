@@ -37,4 +37,6 @@ void _pall(stack_t **stack, unsigned int line_number);
 void _free(stack_t **stack);
 char **_strtok(char *line);
 char *strcp(char *str);
+int get_verifier(char *argue);
+
 #endif /* LIFO_FIFO_H */

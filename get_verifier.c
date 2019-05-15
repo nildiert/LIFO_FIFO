@@ -4,23 +4,23 @@
  *@argue: Operator received, based on the Read file
  *Return: Pointer to the right function
  */
-int (*get_verifier(char *argue))
+int get_verifier(char *argue)
 {
 	int comp;
 
 	instruction_t instructions[] = {
 		{"push", _push},
-		{"pall", _pall},
+		/*{"pall", _pall},
 		{"pint", _pint},
 		{"pop", _pop},
 		{"swap", _swap},
 		{"add", _add},
-		{"nop", _nop},
+		{"nop", _nop},*/
 		{NULL, NULL}
 	};
 	int i = 0;
 
-	while (i <= 7)
+	while (i <= 2)
 	{
 		comp = strcmp(instructions[i].opcode, argue);
 		if (comp == 0)

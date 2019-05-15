@@ -1,27 +1,29 @@
 #include "lifo_fifo.h"
 /**
  * _strtok - tokenize and return an array of tokens
- * @istring: string to be tokenized.
- * @delimit: string to know where to tokenized.
+ *@line: the file to cut
  *
  * Return: array of tokens.
  */
-char **_strtok(char *line, char *delimit)
+char **_strtok(char *line)
 {
+	const char *delimit =  " \t\n $";
 	int i = 0;
 	char **tokens;
 	char *tok;
 	char *dup_token;
+	char *first_dup;
 
+	first_dup = strcp(line);
 	dup_token = strcp(line);
-	tok = strtok(line, delimit);
+	tok = strtok(first_dup, delimit);
 	i++;
 	while (tok != NULL)
 	{
 		tok = strtok(NULL, delimit);
 		i++;
 	}
-	tokens = malloc(sizeof(char) * i);
+	tokens = malloc(sizeof(char *) * i);
 	i = 0;
 	tokens[i] = strtok(dup_token, delimit);
 	while (tokens[i] != NULL)
@@ -29,6 +31,7 @@ char **_strtok(char *line, char *delimit)
 		i++;
 		tokens[i] = strtok(NULL, delimit);
 	}
+	free (first_dup);
 	return (tokens);
 }
 
@@ -50,7 +53,7 @@ char *strcp(char *str)
 	while (str[size])
 		size++;
 
-	dup = malloc((size) * sizeof(char));
+	dup = malloc((size + 1) * sizeof(char));
 	while (counter <= size)
 	{
 		dup[counter] = str[counter];

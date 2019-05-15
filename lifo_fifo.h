@@ -2,6 +2,7 @@
 #define LIFO_FIFO_H
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -34,4 +35,6 @@ typedef struct instruction_s
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _free(stack_t **stack);
+char **_strtok(char *line);
+char *strcp(char *str);
 #endif /* LIFO_FIFO_H */

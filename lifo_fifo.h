@@ -4,6 +4,13 @@
 /* Libraries */
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -18,10 +25,11 @@
 /*
 * Prototypes
 */
-int read_file(void);
-void _push(stack_t **stack, unsigned int line_number);
+int read_file(int argc, char *argv[]);
+/* void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _free(stack_t **stack);
+*/
 
 typedef struct stack_s
 {

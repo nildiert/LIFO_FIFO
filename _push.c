@@ -11,7 +11,9 @@ void _push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new;
 	stack_t *copy;
+	int global = 1;
 
+	(void)line_number;
 	if (!stack)
 		/* return (0); */
 		return;
@@ -19,7 +21,7 @@ void _push(stack_t **stack, unsigned int line_number)
 	if (!new)
 		/* return (NULL); */
 		return;
-	new->n = line_number;
+	new->n = global;
 	new->next = NULL;
 	if (!*stack)
 	{

@@ -27,4 +27,8 @@ void read_file(char *mystring, stack_t **stack)
 		}
 		fclose(file);
 	}
+	else
+	{
+		printf("File not found\n");
+	}
 }

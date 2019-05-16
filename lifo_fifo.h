@@ -1,12 +1,14 @@
 #ifndef LIFO_FIFO_H
 #define LIFO_FIFO_H
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/types.h>
+#include <errno.h>
 #include <sys/stat.h>
-#include<fcntl.h>
-#include<unistd.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <string.h>
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -39,6 +41,7 @@ typedef struct instruction_s
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _free(stack_t **stack);
-char **_strtok(char *line);
+void read_file(char *mystring);
 char *strcp(char *str);
+char **_strtok(char *line);
 #endif /* LIFO_FIFO_H */

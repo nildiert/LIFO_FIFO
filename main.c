@@ -19,7 +19,10 @@ int main(int argc, char **argv)
 	if (argc >= 2 && argc <=3)
 		read_file(argv[1], stack);
 	else
+	{
 		perror("Open file failed");
+		exit(EXIT_FAILURE);
+	}
 	return (0);
 	free(stack);
 }

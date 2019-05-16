@@ -12,16 +12,15 @@ void read_file(char *mystring, stack_t **stack)
 	char line [ 128 ];
 	char **arguments;
 
-	printf("::DEBUG:: read_file\n");
 	(void)stack;
 		while ( fgets ( line, sizeof line, file ) != NULL )
                 {
+
 			count++;
 /*DEBUG::			printf("%s", line);*/
 			arguments = _strtok(line);
 			verifier(arguments, stack, count);
-			printf("%s %s line:: %d \n", arguments[0], arguments[1], count);
-
+	
                 }
                 fclose ( file );
 }

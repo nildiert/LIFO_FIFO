@@ -13,7 +13,7 @@ void _push(stack_t **stack, unsigned int line_number)
 	stack_t *copy;
 	int global = 1;
 
-	printf("::DEBUG:: verifier\n");
+	printf("push\n");
 	(void)line_number;
 	if (!*stack)
 		/* return (0); */

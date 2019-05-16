@@ -34,10 +34,8 @@ Argumento dos [1]: Si existe, crear un nodo en la lista de la estructura (comple
 	for (j = 0; instructions[j].opcode; j++)
 	{
 
-		if (strcmp(instructions[j].opcode,reception[0]))
+		if (!(strcmp(instructions[j].opcode,reception[0])))
 		{
-			printf("::DEBUG:: verifier\n");
-			/* global = atoi(reception[1]); */
 			instructions[j].f(stack, (unsigned int)line);
 			break;
 		}

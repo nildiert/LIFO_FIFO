@@ -12,7 +12,6 @@ int main(int argc, char **argv)
 	*stack = '\0';
 	/* extern int global; */
 
-	printf("::DEBUG:: main.c\n");
 	(void)argc;
 	(void)global;
 	(void)argv;

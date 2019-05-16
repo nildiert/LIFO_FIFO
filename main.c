@@ -12,6 +12,7 @@ int main(int argc, char **argv)
 
 	stack = malloc(sizeof(stack_t));
 	*stack = '\0';
+
 	/* extern int global; */
 
 	(void)global;

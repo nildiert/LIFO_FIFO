@@ -47,4 +47,7 @@ char *strcp(char *str);
 int get_verifier(char *argue);
 char **_strtok(char *line);
 void verifier(char **reception, stack_t **stack, int line);
+void _pop(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
 #endif /* LIFO_FIFO_H */

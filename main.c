@@ -13,14 +13,12 @@ int main(int argc, char **argv)
 	*stack = '\0';
 	/* extern int global; */
 
-	(void)argc;
 	(void)global;
-	(void)argv;
 	if (argc >= 2 && argc <=3)
 		read_file(argv[1], stack);
 	else
 	{
-		perror("Open file failed");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	return (0);

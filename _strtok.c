@@ -31,7 +31,7 @@ char **_strtok(char *line)
 		i++;
 		tokens[i] = strtok(NULL, delimit);
 	}
-	free (first_dup);
+	free(first_dup);
 	return (tokens);
 }
 

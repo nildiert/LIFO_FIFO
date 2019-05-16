@@ -13,13 +13,11 @@ void verifier(char **reception, stack_t **stack, int line)
 	instruction_t instructions[] = {
 		{"push", _push},
 		{"pall", _pall},
-		/*
-		* {"pint", _pint},
-		* {"pop", _pop},
-		* {"swap", _swap},
-		* {"add", _add},
-		* {"nop", _nop},
-		*/
+		{"pint", _pint},
+		{"pop", _pop},
+		/**{"swap", _swap},
+		   {"add", _add},*/
+		{"nop", _nop},
 		{NULL, NULL}
 	};
 
@@ -34,6 +32,8 @@ void verifier(char **reception, stack_t **stack, int line)
 
 		if (!(strcmp(instructions[j].opcode, reception[0])))
 		{
+			if (!strcmp(reception[0], "push"))
+				global = atoi(reception[1]);
 			instructions[j].f(stack, (unsigned int)line);
 			break;
 		}

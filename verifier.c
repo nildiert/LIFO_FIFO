@@ -3,29 +3,40 @@
  *verifier - Verify coincidence on a structure predefined
  *Return: If coincidence 0, else 1
  */
-void verifier(char **reception)
+void verifier(char **reception, stack_t **stack, int line)
 {
-/* Verificar las posiciones
-El primer elemento del array [0] en una estructura, debe compararse
-(Ver calc)
-Si coincide, retornar 0.
-Si no coincide, retornar 1.
-Argumento dos [1]: Si existe, crear un nodo en la lista de la estructura (completar)
-*/
-	int sec;
-	int oper;
-	int exe;
+	int j = 0;
+	/* int global; */
+	instruction_t instructions[] = {
+		{"push", _push},
+		{"pall", _pall},
+		/*	{"pint", _pint},
+		{"pop", _pop},
+		{"swap", _swap},
+		{"add", _add},
+		{"nop", _nop},*/
+		{NULL, NULL}
+	};
 
-	if (reception[0])
+	/* (void)reception; */
+	/* (void)j; */
+	/* (void)instructions; */
+	/* (void)stack; */
+	/* (void)line; */
+
+	for (j = 0; instructions[j].opcode; j++)
 	{
-		oper = get_verifier(reception[0]);
 
-		if (reception[1])
+		if (!(strcmp(instructions[j].opcode,reception[0])))
 		{
-			sec = atoi(reception[1]);
-			   /*addnode with sec*/
+			instructions[j].f(stack, (unsigned int)line);
+			break;
 		}
-		exe = (*f)(
 	}
 
+/*	for (j = 0; instructions[j].opcode; j++).
+	{
+		if (reception[0] == *(instructions[j].opcode))
+			printf("%s", reception[0]);
+			}*/
 }

@@ -1,7 +1,5 @@
 #ifndef LIFO_FIFO_H
 #define LIFO_FIFO_H
-
-/* Libraries */
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -20,18 +18,6 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO Holberton project
  */
-
-/*
-* Prototypes
-*/
-int read_file(int argc, char *argv[]);
-/* void _push(stack_t **stack, unsigned int line_number);
-void _pall(stack_t **stack, unsigned int line_number);
-void _free(stack_t **stack);
-char **_strtok(char *line);
-char *strcp(char *str);
-*/
-
 typedef struct stack_s
 {
 	int n;
@@ -52,4 +38,10 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+void _push(stack_t **stack, unsigned int line_number);
+void _pall(stack_t **stack, unsigned int line_number);
+void _free(stack_t **stack);
+void read_file(char *mystring);
+char *strcp(char *str);
+char **_strtok(char *line);
 #endif /* LIFO_FIFO_H */

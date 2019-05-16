@@ -4,34 +4,22 @@
  *
  *Return: 0
  */
-void read_file(*char mystring)
+void read_file(char *mystring)
 /* int main(int argc, char **argv) */
+
 {
-        int fd = open(mystring, O_RDONLY);
-        int size= 1024, count = 0;
+	int count = 0;
         FILE *file = fopen ( mystring, "r" );
-	char ch;
+	char line [ 128 ];
+	char **arguments;
 
-        (void)argv;
-        (void)fd;
-        (void)size;
-
-        if ( argc == 2 )
-        {
-                char line [ 128 ]; /* or other suitable maximum line size */
-                while ( fgets ( line, sizeof line, file ) != NULL )
+		while ( fgets ( line, sizeof line, file ) != NULL )
                 {
-			while((fgetc(fd)) != "\n")
-			printf("%c", ch);
-                        count++;
-                       printf("%s count: ", line);
+			count++;
+/*DEBUG::			printf("%s", line);*/
+			arguments = _strtok(line);
+			printf("%s %s line:: %d \n", arguments[0], arguments[1], count);
+
                 }
                 fclose ( file );
-        }
-	else
-	{
-		perror("Open file failed");
-	}
-
-        printf("File: %s fd: %d count: %d\n", argv[1], fd, count);
 }

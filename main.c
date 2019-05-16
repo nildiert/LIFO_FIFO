@@ -9,12 +9,13 @@
 int main(int argc, char **argv)
 {
 	stack_t **stack;
+
 	stack = malloc(sizeof(stack_t));
 	*stack = '\0';
 	/* extern int global; */
 
 	(void)global;
-	if (argc >= 2 && argc <=3)
+	if (argc >= 2 && argc <= 3)
 		read_file(argv[1], stack);
 	else
 	{

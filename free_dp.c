@@ -2,9 +2,9 @@
 /**
  *
  */
-int *len_stack(stack_t **stack)
+int *len_stack(char **stack)
 {
-	stack_t *counter;
+	char *counter;
 	int *size;
 
 	counter = *stack;
@@ -17,7 +17,7 @@ int *len_stack(stack_t **stack)
 	return (size);
 
 }
-void free_dp(stack_t **stack, int *size)
+void free_dp(char **stack, int *size)
 { 
 	int aux = *size;
 	int i;
@@ -27,7 +27,7 @@ void free_dp(stack_t **stack, int *size)
 		free(stack[i]);
 	}
 }
-void free_aux(stack_t **stack)
+void free_aux(char **stack)
 {
 	stack_t *actual;
 

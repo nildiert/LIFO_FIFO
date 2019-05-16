@@ -13,13 +13,11 @@ void verifier(char **reception, stack_t **stack, int line)
 	instruction_t instructions[] = {
 		{"push", _push},
 		{"pall", _pall},
-		/*
-		* {"pint", _pint},
-		* {"pop", _pop},
-		* {"swap", _swap},
-		* {"add", _add},
-		* {"nop", _nop},
-		*/
+		{"pint", _pint},
+		{"pop", _pop},
+		/**{"swap", _swap},
+		   {"add", _add},*/
+		{"nop", _nop},
 		{NULL, NULL}
 	};
 

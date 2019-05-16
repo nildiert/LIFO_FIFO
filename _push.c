@@ -11,29 +11,16 @@ int global;
 void _push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new;
-	stack_t *copy;
+
+	new = malloc(sizeof(stack_t));
 
 	(void)line_number;
-	new = malloc(sizeof(stack_t));
 	if (!new)
-		/* return (NULL); */
 		return;
 	new->n = global;
-	new->next = NULL;
-	if (!*stack)
-	{
-		new->prev = NULL;
-		*stack = new;
-		return;
-		/* return (*head); */
-	}
-	copy = *stack;
-	while (copy->next)
-	{
-		copy = copy->next;
-	}
-	copy->next = new;
-	new->prev = copy;
-
-	/* return (new); */
+	new->next = *stack;
+	new->prev = NULL;
+	if (*stack)
+		(*stack)->prev = new;
+	*stack = new;
 }

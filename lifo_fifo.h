@@ -44,4 +44,7 @@ void _free(stack_t **stack);
 void read_file(char *mystring);
 char *strcp(char *str);
 char **_strtok(char *line);
+void _pop(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
 #endif /* LIFO_FIFO_H */

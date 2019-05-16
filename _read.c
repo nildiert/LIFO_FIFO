@@ -29,7 +29,7 @@ void read_file(char *mystring, stack_t **stack)
 	}
 	else
 	{
-		printf("Error: Can't open file\n, %s", mystring);
+		fprintf(stderr, "Error: Can't open file, %s\n", mystring);
 		exit(EXIT_FAILURE);
 	}
 }

@@ -34,6 +34,8 @@ void verifier(char **reception, stack_t **stack, int line)
 
 		if (!(strcmp(instructions[j].opcode, reception[0])))
 		{
+			if (!strcmp(reception[0], "push"))
+				global = atoi(reception[1]);
 			instructions[j].f(stack, (unsigned int)line);
 			break;
 		}

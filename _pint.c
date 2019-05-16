@@ -1,7 +1,9 @@
-#include "fifo_lifo.h"
+#include "lifo_fifo.h"
 /**
- *
- *
+ *_pint - print the top of the stack
+ *@stack: pointer to the stack
+ *@line_number: the line number
+ *Return: nothing
  */
 void _pint(stack_t **stack, unsigned int line_number)
 {

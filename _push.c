@@ -11,15 +11,18 @@ void _push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new;
 	stack_t *copy;
+	int global = 1;
 
-	if (!stack)
+	printf("push\n");
+	(void)line_number;
+	if (!*stack)
 		/* return (0); */
 		return;
 	new = malloc(sizeof(stack_t));
 	if (!new)
 		/* return (NULL); */
 		return;
-	new->n = line_number;
+	new->n = global;
 	new->next = NULL;
 	if (!*stack)
 	{

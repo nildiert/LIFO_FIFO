@@ -11,14 +11,16 @@ void read_file(char *mystring, stack_t **stack)
 {
 	int count = 0;
 	FILE *file = fopen(mystring, "r");
+	size_t bufsize = 0;
 
 	if (file)
 	{
-		char line[128];
+		char *line = NULL;
 		char **arguments;
 
 		(void)stack;
-		while (fgets(line, sizeof(line), file) != NULL)
+
+		while (getline(&line, &bufsize, file) != -1)
 		{
 			count++;
 /*DEBUG::			printf("%s", line);*/

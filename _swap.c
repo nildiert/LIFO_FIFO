@@ -12,7 +12,7 @@ void swap(stack_t **stack, unsigned int line_number)
 	int value;
 	int len;
 
-	len = *len_stack(stack);
+	len = len_stack(stack);
 	
 	if (len < 2)
 	{
@@ -29,10 +29,10 @@ void swap(stack_t **stack, unsigned int line_number)
  *@stack: pointer to the stack
  *Return: size
  */
-int *len_stack(stack_t **stack)
+int len_stack(stack_t **stack)
 {
         stack_t *counter;
-        int *size;
+        int size = 0; 
 
         counter = *stack;
         while (counter != NULL)

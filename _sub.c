@@ -10,7 +10,7 @@ void _sub(stack_t **stack, unsigned int line_number)
 	stack_t *node;
 	int size = 0;
 
-	node = (*stack)
+	node = (*stack);
 
 		while (node)
 		{

@@ -24,6 +24,7 @@ void read_file(char *mystring, stack_t **stack)
 /*DEBUG::			printf("%s", line);*/
 			arguments = _strtok(line);
 			verifier(arguments, stack, count);
+			_free_doub(arguments);
 		}
 		free_dp(arguments,len_stack(arguments));
 		free_aux(arguments);

@@ -1,4 +1,4 @@
-#include "lifo_fifo.h"
+#include "monty.h"
 /**
  *_nop - do nothing
  *@stack: pointer to the stack

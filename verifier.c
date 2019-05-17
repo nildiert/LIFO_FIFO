@@ -1,4 +1,4 @@
-#include "lifo_fifo.h"
+#include "monty.h"
 /**
  *verifier - Verify coincidence on a structure predefined
  *@reception: entry argument

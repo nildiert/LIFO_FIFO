@@ -1,4 +1,4 @@
-#include "lifo_fifo.h"
+#include "monty.h"
 
 /**
  *_div - Divide two elements of the stack and combine nodes

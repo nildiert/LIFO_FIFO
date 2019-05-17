@@ -51,4 +51,5 @@ void _pop(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
 void _free_doub(char **args);
+void _add(stack_t **stack, unsigned int line_number);
 #endif /* LIFO_FIFO_H */

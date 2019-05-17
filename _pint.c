@@ -1,4 +1,4 @@
-#include "lifo_fifo.h"
+#include "monty.h"
 /**
  *_pint - print the top of the stack
  *@stack: pointer to the stack

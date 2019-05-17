@@ -1,4 +1,4 @@
-#include "lifo_fifo.h"
+#include "monty.h"
 /**
  *_pop - remove the first element in the stack
  *@stack: pointer to the stack

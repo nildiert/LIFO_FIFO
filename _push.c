@@ -1,4 +1,4 @@
-#include "lifo_fifo.h"
+#include "monty.h"
 int global;
 /**
  *_push - this is the main function to process all functions

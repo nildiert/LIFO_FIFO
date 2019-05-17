@@ -1,4 +1,4 @@
-#include "lifo_fifo.h"
+#include "monty.h"
 /**
  *read_file - this is the function to read the file
  *@mystring: entry string

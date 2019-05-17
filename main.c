@@ -1,4 +1,4 @@
-#include "lifo_fifo.h"
+#include "monty.h"
 /**
  *main - this is the main function to process all functions
  *@argc: the two arguemts

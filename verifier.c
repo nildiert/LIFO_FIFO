@@ -17,6 +17,8 @@ void verifier(char **reception, stack_t **stack, int line)
 		{"pop", _pop},
 		{"swap", swap},
 		/*   {"add", _add},*/
+		{"sub", _sub},
+		{"div", _div},
 		{"nop", _nop},
 		{NULL, NULL}
 	};
